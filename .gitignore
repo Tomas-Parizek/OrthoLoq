@@ -1,0 +1,30 @@
+# Compiled executables
+/ortholoq
+
+# Build artifacts
+*.o
+*.d
+*.a
+*.so
+*.so.*
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.#*
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Linux core dumps
+core
+core.*
+
+# Other operating system files
+.DS_Store
+Thumbs.db
