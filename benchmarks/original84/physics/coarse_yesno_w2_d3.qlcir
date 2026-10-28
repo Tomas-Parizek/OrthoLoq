@@ -1,0 +1,14 @@
+#QLCIR-G1
+# name: coarse_yesno_w2_d3
+# family: physics/coarse-measurement
+# expected: SAT
+# note: Failure of classical decomposition of psi by a yes/no event formed from 2 elementary outcomes.
+dim(3)
+output(7)
+1 = or(out0, out1)
+2 = and(psi, 1)
+3 = not(1)
+4 = and(psi, 3)
+5 = or(2, 4)
+6 = not(5)
+7 = and(psi, 6)

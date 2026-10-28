@@ -1,0 +1,14 @@
+#QLCIR-G1
+# name: detector_merge_assoc_k3_d3_rev
+# family: physics/detector-merge-associativity
+# expected: UNSAT
+# physical: Order-independent hierarchical coarse-graining of detector bins as joins of subspaces.
+# note: One-sided difference between two parenthesizations of merging 3 detector bins.
+dim(3)
+output(6)
+1 = or(bin0, bin1)
+2 = or(1, bin2)
+3 = or(bin1, bin2)
+4 = or(bin0, 3)
+5 = not(2)
+6 = and(4, 5)

@@ -1,0 +1,19 @@
+#QLCIR-G1
+# name: full_support_L3_above_d3
+# family: physics/finite-level-full-support
+# tier: 1
+# expected: SAT
+# parameters: levels=3;d=3;side=above
+# note: 3-level full-support configuration at/above the dimension boundary; paired SAT/UNSAT scaling family.
+dim(3)
+output(10)
+1 = or(outcome0, outcome1, outcome2)
+2 = or(outcome1, outcome2)
+3 = and(psi, 2)
+4 = or(outcome0, outcome2)
+5 = and(psi, 4)
+6 = or(outcome0, outcome1)
+7 = and(psi, 6)
+8 = or(3, 5, 7)
+9 = not(8)
+10 = and(psi, 1, 9)

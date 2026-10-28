@@ -1,0 +1,17 @@
+#QLCIR-G1
+# name: orthomodular_refinement_w2_d3
+# family: physics/orthomodular-refinement
+# tier: 2
+# expected: UNSAT
+# parameters: width=2;d=3
+# note: Negation of orthomodular reconstruction U<=V => V=U v (V & U^perp), with U and V built from refined detector events.
+dim(3)
+output(8)
+1 = or(u0, u1)
+2 = or(x0, x1)
+3 = or(1, 2)
+4 = not(1)
+5 = and(4, 3)
+6 = or(1, 5)
+7 = not(6)
+8 = and(3, 7)

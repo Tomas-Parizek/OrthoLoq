@@ -1,0 +1,25 @@
+#QLCIR-G1
+# name: full_support_L6_boundary_d5
+# family: physics/finite-level-full-support
+# tier: 4
+# expected: UNSAT
+# parameters: levels=6;d=5;side=boundary
+# note: 6-level full-support configuration at/above the dimension boundary; paired SAT/UNSAT scaling family.
+dim(5)
+output(16)
+1 = or(outcome0, outcome1, outcome2, outcome3, outcome4, outcome5)
+2 = or(outcome1, outcome2, outcome3, outcome4, outcome5)
+3 = and(psi, 2)
+4 = or(outcome0, outcome2, outcome3, outcome4, outcome5)
+5 = and(psi, 4)
+6 = or(outcome0, outcome1, outcome3, outcome4, outcome5)
+7 = and(psi, 6)
+8 = or(outcome0, outcome1, outcome2, outcome4, outcome5)
+9 = and(psi, 8)
+10 = or(outcome0, outcome1, outcome2, outcome3, outcome5)
+11 = and(psi, 10)
+12 = or(outcome0, outcome1, outcome2, outcome3, outcome4)
+13 = and(psi, 12)
+14 = or(3, 5, 7, 9, 11, 13)
+15 = not(14)
+16 = and(psi, 1, 15)

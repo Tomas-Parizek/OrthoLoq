@@ -1,0 +1,17 @@
+#QLCIR-G1
+# name: multioutcome_2distrib_d2
+# family: physics/multi-outcome-context
+# expected: UNSAT
+# note: 2-distributivity boundary for 3 outcome propositions; generic multi-outcome Hilbert-lattice context.
+dim(2)
+output(10)
+1 = or(y0, y1, y2)
+2 = or(y1, y2)
+3 = and(psi, 2)
+4 = or(y0, y2)
+5 = and(psi, 4)
+6 = or(y0, y1)
+7 = and(psi, 6)
+8 = or(3, 5, 7)
+9 = not(8)
+10 = and(psi, 1, 9)

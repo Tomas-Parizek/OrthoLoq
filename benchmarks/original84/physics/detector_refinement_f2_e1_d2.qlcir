@@ -1,0 +1,12 @@
+#QLCIR-G1
+# name: detector_refinement_f2_e1_d2
+# family: physics/detector-refinement
+# expected: UNSAT
+# physical: Monotonicity of coarse-grained measurement events / detector-bin merging.
+# note: Fine event with 2 outcomes is explicitly included in a coarser event obtained by adding 1 outcomes; asks for a state in fine but outside coarse.
+dim(2)
+output(4)
+1 = or(fine0, fine1)
+2 = or(1, extra0)
+3 = not(2)
+4 = and(1, 3)

@@ -1,0 +1,20 @@
+#QLCIR-G1
+# name: fullsupport_4level_d5
+# family: physics/finite-level-full-support
+# expected: SAT
+# physical: Finite 4-level system: abstract state with support not captured by any join omitting one outcome; no probabilities are encoded.
+# note: Full-support witness for 4 abstract outcome propositions; n-distributivity boundary instance.
+dim(5)
+output(12)
+1 = or(level0, level1, level2, level3)
+2 = or(level1, level2, level3)
+3 = and(state, 2)
+4 = or(level0, level2, level3)
+5 = and(state, 4)
+6 = or(level0, level1, level3)
+7 = and(state, 6)
+8 = or(level0, level1, level2)
+9 = and(state, 8)
+10 = or(3, 5, 7, 9)
+11 = not(10)
+12 = and(state, 1, 11)

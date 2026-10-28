@@ -1,0 +1,24 @@
+#QLCIR-G1
+# name: fullsupport_6level_d6
+# family: physics/finite-level-full-support
+# expected: SAT
+# physical: Finite 6-level system: abstract state with support not captured by any join omitting one outcome; no probabilities are encoded.
+# note: Full-support witness for 6 abstract outcome propositions; n-distributivity boundary instance.
+dim(6)
+output(16)
+1 = or(level0, level1, level2, level3, level4, level5)
+2 = or(level1, level2, level3, level4, level5)
+3 = and(state, 2)
+4 = or(level0, level2, level3, level4, level5)
+5 = and(state, 4)
+6 = or(level0, level1, level3, level4, level5)
+7 = and(state, 6)
+8 = or(level0, level1, level2, level4, level5)
+9 = and(state, 8)
+10 = or(level0, level1, level2, level3, level5)
+11 = and(state, 10)
+12 = or(level0, level1, level2, level3, level4)
+13 = and(state, 12)
+14 = or(3, 5, 7, 9, 11, 13)
+15 = not(14)
+16 = and(state, 1, 15)

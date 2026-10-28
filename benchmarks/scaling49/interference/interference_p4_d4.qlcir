@@ -1,0 +1,17 @@
+#QLCIR-G1
+# name: interference_p4_d4
+# family: physics/interference
+# tier: 3
+# expected: SAT
+# parameters: paths=4;d=4
+# note: A 4-alternative superposition witness not reconstructible from pathwise meets.
+dim(4)
+output(8)
+1 = or(path0, path1, path2, path3)
+2 = and(psi, path0)
+3 = and(psi, path1)
+4 = and(psi, path2)
+5 = and(psi, path3)
+6 = or(2, 3, 4, 5)
+7 = not(6)
+8 = and(psi, 1, 7)

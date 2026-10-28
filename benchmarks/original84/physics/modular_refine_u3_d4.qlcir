@@ -1,0 +1,16 @@
+#QLCIR-G1
+# name: modular_refine_u3_d4
+# family: physics/modular-subspace-reconstruction
+# expected: UNSAT
+# physical: Finite-dimensional subspace modularity interpreted as consistency of nested proposition reconstruction.
+# note: Negation of modular reconstruction U v (P ^ W) = (U v P) ^ W with U<=W; U has 3 generator event(s).
+dim(4)
+output(8)
+1 = or(u0, u1, u2)
+2 = or(1, extension)
+3 = and(probe, 2)
+4 = or(1, 3)
+5 = or(1, probe)
+6 = and(5, 2)
+7 = not(4)
+8 = and(6, 7)

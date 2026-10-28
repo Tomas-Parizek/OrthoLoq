@@ -1,0 +1,15 @@
+#QLCIR-G1
+# name: orthomod_refine_u2_e1_d3
+# family: physics/orthomodular-refinement
+# expected: UNSAT
+# physical: Reconstruction of a refined measurement proposition from a coarse event plus its orthogonal remainder.
+# note: Negation of V = U v (U^perp ^ V) for an explicitly nested coarse event U<=V (2 base outcomes, 1 added outcomes).
+dim(3)
+output(7)
+1 = or(u0, u1)
+2 = or(1, vextra0)
+3 = not(1)
+4 = and(3, 2)
+5 = or(1, 4)
+6 = not(5)
+7 = and(2, 6)

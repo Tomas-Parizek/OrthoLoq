@@ -1,0 +1,23 @@
+#QLCIR-G1
+# name: grouped_interference_g5_w4_d6
+# family: physics/grouped-interferometers
+# tier: 5
+# expected: SAT
+# parameters: groups=5;width=4;d=6
+# note: Grouped path alternatives form a coarse interferometer; psi is not reconstructed from groupwise meets.
+dim(6)
+output(14)
+1 = or(path_0_0, path_0_1, path_0_2, path_0_3)
+2 = or(path_1_0, path_1_1, path_1_2, path_1_3)
+3 = or(path_2_0, path_2_1, path_2_2, path_2_3)
+4 = or(path_3_0, path_3_1, path_3_2, path_3_3)
+5 = or(path_4_0, path_4_1, path_4_2, path_4_3)
+6 = or(1, 2, 3, 4, 5)
+7 = and(psi, 1)
+8 = and(psi, 2)
+9 = and(psi, 3)
+10 = and(psi, 4)
+11 = and(psi, 5)
+12 = or(7, 8, 9, 10, 11)
+13 = not(12)
+14 = and(psi, 6, 13)

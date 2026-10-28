@@ -1,0 +1,16 @@
+family	instances	SAT	UNSAT
+Coarse-grained measurements	8	8	0
+Complemented channels	6	0	6
+Detector-event merging	4	0	4
+Detector-event refinement	6	0	6
+Dichotomic completeness	3	0	3
+Finite-level full support	6	4	2
+Grouped interferometers	8	8	0
+Incompatible contexts	4	4	0
+Interference and superposition	9	9	0
+Modular reconstruction	3	0	3
+Modular subspace reconstruction	5	0	5
+Multi-outcome contexts	6	3	3
+Multiple spin contexts	8	8	0
+Orthomodular reconstruction	2	0	2
+Orthomodular refinement	6	0	6

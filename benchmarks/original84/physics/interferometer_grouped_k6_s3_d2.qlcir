@@ -1,0 +1,16 @@
+#QLCIR-G1
+# name: interferometer_grouped_k6_s3_d2
+# family: physics/grouped-interferometer
+# expected: SAT
+# physical: Abstract multi-slit/interferometer coarse-graining; only proposition structure is encoded, not amplitudes or phases.
+# note: 6-path event coarse-grained into groups of 3 and 3 paths; psi belongs to the total event but is not classically reconstructed from the two coarse pieces.
+dim(2)
+output(8)
+1 = or(path0, path1, path2)
+2 = or(path3, path4, path5)
+3 = or(1, 2)
+4 = and(psi, 1)
+5 = and(psi, 2)
+6 = or(4, 5)
+7 = not(6)
+8 = and(psi, 3, 7)

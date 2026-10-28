@@ -1,0 +1,16 @@
+#QLCIR-G1
+# name: demorgan_channels_k3_d4_rev
+# family: physics/complemented-channels
+# expected: UNSAT
+# physical: Logical relation between a coarse detector event and the event that none of its constituent channels occurs.
+# note: One-sided difference test for De Morgan equivalence between exclusion of a 3-channel coarse event and simultaneous exclusion of every channel.
+dim(4)
+output(8)
+1 = or(ch0, ch1, ch2)
+2 = not(1)
+3 = not(ch0)
+4 = not(ch1)
+5 = not(ch2)
+6 = and(3, 4, 5)
+7 = not(2)
+8 = and(6, 7)

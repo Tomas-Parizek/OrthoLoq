@@ -1,0 +1,19 @@
+#QLCIR-G1
+# name: interference_p6_d5
+# family: physics/interference
+# tier: 4
+# expected: SAT
+# parameters: paths=6;d=5
+# note: A 6-alternative superposition witness not reconstructible from pathwise meets.
+dim(5)
+output(10)
+1 = or(path0, path1, path2, path3, path4, path5)
+2 = and(psi, path0)
+3 = and(psi, path1)
+4 = and(psi, path2)
+5 = and(psi, path3)
+6 = and(psi, path4)
+7 = and(psi, path5)
+8 = or(2, 3, 4, 5, 6, 7)
+9 = not(8)
+10 = and(psi, 1, 9)

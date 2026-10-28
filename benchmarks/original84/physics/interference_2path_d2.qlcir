@@ -1,0 +1,13 @@
+#QLCIR-G1
+# name: interference_2path_d2
+# family: physics/interference
+# expected: SAT
+# note: 2-alternative superposition witness: psi lies in the coarse path event but is not reconstructible from pathwise meets.
+dim(2)
+output(6)
+1 = or(path0, path1)
+2 = and(psi, path0)
+3 = and(psi, path1)
+4 = or(2, 3)
+5 = not(4)
+6 = and(psi, 1, 5)

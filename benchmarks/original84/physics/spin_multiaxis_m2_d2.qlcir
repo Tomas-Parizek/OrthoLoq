@@ -1,0 +1,19 @@
+#QLCIR-G1
+# name: spin_multiaxis_m2_d2
+# family: physics/spin-multiple-contexts
+# expected: SAT
+# physical: Abstract Stern-Gerlach / basis-change situation with several incompatible yes-no measurement contexts.
+# note: Shared state violates classical decomposition with respect to each of 2 independently chosen dichotomic analyzer events.
+dim(2)
+output(11)
+1 = and(state, axis0_plus)
+2 = not(axis0_plus)
+3 = and(state, 2)
+4 = or(1, 3)
+5 = not(4)
+6 = and(state, axis1_plus)
+7 = not(axis1_plus)
+8 = and(state, 7)
+9 = or(6, 8)
+10 = not(9)
+11 = and(state, 5, 10)

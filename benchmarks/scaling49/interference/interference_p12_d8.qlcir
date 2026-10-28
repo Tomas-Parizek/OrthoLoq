@@ -1,0 +1,25 @@
+#QLCIR-G1
+# name: interference_p12_d8
+# family: physics/interference
+# tier: 7
+# expected: SAT
+# parameters: paths=12;d=8
+# note: A 12-alternative superposition witness not reconstructible from pathwise meets.
+dim(8)
+output(16)
+1 = or(path0, path1, path2, path3, path4, path5, path6, path7, path8, path9, path10, path11)
+2 = and(psi, path0)
+3 = and(psi, path1)
+4 = and(psi, path2)
+5 = and(psi, path3)
+6 = and(psi, path4)
+7 = and(psi, path5)
+8 = and(psi, path6)
+9 = and(psi, path7)
+10 = and(psi, path8)
+11 = and(psi, path9)
+12 = and(psi, path10)
+13 = and(psi, path11)
+14 = or(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+15 = not(14)
+16 = and(psi, 1, 15)
